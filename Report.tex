@@ -216,9 +216,28 @@ The corresponding parameters are summarized in table~\ref{tab:variables}:
 \label{tab:variables}
 \end{table}
 
+Adoping the discribed model architecture, figure~\ref{fig:output} shows 7 time steps $\Delta t$ with vectors which correspond to the respective $S^{(3)}_{MT}$.
 
+\vspace{0.5cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=8cm]{pics/output}
+\caption{Outputs of 7 model time steps $\Delta t$ are shown where only the relevant vectors on the stimulus edges are presented.}
+\label{fig:output}
+\end{figure}
+\vspace{0.5cm}
 
+The feedback $net_{FB}$ which corresponds to the moved output of the pevious loop can be seen in figure~\ref{fig:feedback}. The first square does not have any corresponding vectors, since the first model loop does not have any feedback from previous loops.
+\newpage
+\begin{figure}[ht]
+\centering
+\includegraphics[width=8cm]{pics/feedback}
+\caption{feedback of 7 model time steps $\Delta t$ are shown where only the relevant vectors on the stimulus edges are presented.}
+\label{fig:feedback}
+\end{figure}
+\vspace{0.5cm}
 
+To illustrate the most extreme cases, one can observe vectors in the middle of the horizontal and vertical stimulus edge. Due to their location being most distant from the unambiguous stimulus corners, their direction will unambiguate the slowest.\\
 
 
 
