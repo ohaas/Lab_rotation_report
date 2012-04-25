@@ -12,7 +12,7 @@
 
 \begin{document}
 \begin{titlepage}
-\thispagestyle{empty}
+
 \addtolength{\voffset}{-1cm}
 \title{ 
 \linethickness{0.7mm}
@@ -57,7 +57,7 @@ Martinsried (Munich, Germany)\\
 
 This lab rotation considered the affect of contextual feedback from the visual area MT to the primary visual cortex V1. Due to the aperture effect the movement of the presented square stimulus is amiguous accept at its edges. A model formulated to disambiguate the movement of each pixel consideres three stages within each model area. The first stage architecture is dominated by modulary feedback from the higher stage, whereas the second stage realizes an integration in space by an isotropic gaussian filter. Finally stage three normalizes estimations to emphasize unambgous signals.
 \end{abstract}
-
+\thispagestyle{empty}
 \end{titlepage}
 
 \newpage
@@ -148,5 +148,22 @@ Repeating this procedure for all pixels gives us the final input to the model (f
 \label{fig:input}
 \end{figure}
 \vspace{0.5cm}
+
+\subsection{Model stages}
+\subsubsection{First Stage $S^{(1)}$}
+
+All in- and outputs of model areas have the form of a population code ($(x,y,8)$), in order to store information for all pixels $(x,y)$ with activations of all 8 neurons per pixel.\\
+Within the first model stage $S^{(1)}$ the input population code ($net_{IN}$) gets modified by the feedback ($net_{FB}$) fom the higher brain area. For model area V1 the feedback is the output of model area MT, which is moved to the current position of the stimulus. Model area MT however, does not receive feedback ($net_{FB}=0$) since no higher brain areas are considered in the model.\\
+The modulation by the feedback enhances matching input signals, as shown in equation~\eqref{First_Stage}:
+
+\begin{equation}
+S^{(1)}=net_{IN}\cdot(1+100\cdot net_{FB})
+\label{First_Stage}
+\end{equation}
+
+\subsubsection{Second Stage $S^{(2)}$}
+
+
+
 
 \end{document}
