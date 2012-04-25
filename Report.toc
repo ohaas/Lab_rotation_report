@@ -7,3 +7,7 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Second Stage $S^{(2)}$}{5}
 \contentsline {subsubsection}{\numberline {2.2.3}Third Stage $S^{(3)}$}{5}
 \contentsline {section}{\numberline {3}Results}{6}
+\contentsline {subsection}{\numberline {3.1}Architecture and Variables}{6}
+\contentsline {subsection}{\numberline {3.2}Model output}{6}
+\contentsline {subsection}{\numberline {3.3}Model feedback}{7}
+\contentsline {subsection}{\numberline {3.4}Integrated motion direction}{7}
