@@ -123,13 +123,30 @@ More explicit this means that for each pixel a population code was build to mimi
 
 For each direction in space one can now write an eight dimensional vector, where the rows correspond to the individual neuron with its activation for the chosen direction in space (see figure~\ref{fig:neuronGauss}).\\
 Due to the aperture problem we assume vertical vectors for horizontal stimulus edges and horizontal vectors for vertical edges. The three pixels which form the stimulus corners indecate the correct direction of 45$^{\circ}$.\\
-In order to plot such vectors the neuronal activation from the population code needs to be translated. This can be done by mutiping the eight dimensional vector containing the activation of the single neurons ($A(n)$) with the corresponding basis vectors:
+In order to plot such a vector for each pixel $(x,y)$, the neuronal activation from the population code needs to be translated. This can be done by mutiping the eight dimensional vector containing the activation of the single neurons ($A(n)$) with its basis:
 
 \begin{equation}
-\left(A(1),A(2),\hdots, A(8)\right) \cdot \begin{pmatrix} (0&1) \\ (1&1)\\ \vdots\\ (-1&1)\end{pmatrix}
+V=\left(A(1),A(2),\hdots, A(8)\right) \cdot \begin{pmatrix} (0&1) \\ (1&1)\\ \vdots\\ (-1&1)\end{pmatrix}
+\label{vector1}
 \end{equation}
 
-In order to
+To get the endpoints of the vector for the considered pixel, we sum each column of~\eqref{vector1}:
 
+\begin{equation}
+(\Delta x, \Delta y)=(\sum_{n=1}^{8}V(n,1),\sum_{n=1}^{8}V(n,2))
+\label{vector2}
+\end{equation}
+
+Connecting the considered pixel $(x,y)$ with $(\Delta x, \Delta y)$ of quation~\eqref{vector2} draws the desired vector.\\
+Repeating this procedure for all pixels gives us the final input to the model (figure~\ref{fig:input}).
+
+\vspace{0.5cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=8cm]{pics/input}
+\caption{Input population codes with visualized vectors indecating the motion direction per pixel. One square represents one input per time step, moving in 45 $^{\circ}$.}
+\label{fig:input}
+\end{figure}
+\vspace{0.5cm}
 
 \end{document}
