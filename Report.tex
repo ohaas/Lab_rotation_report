@@ -138,7 +138,7 @@ To get the endpoints of the vector for the considered pixel, we sum each column 
 \end{equation}
 
 Connecting the considered pixel $(x,y)$ with $(\Delta x, \Delta y)$ of quation~\eqref{vector2} draws the desired vector.\\
-Repeating this procedure for all pixels gives us the final input to the model (figure~\ref{fig:input}).
+Repeating this procedure for all pixels gives us the final input ($in_{0}$) to the model (figure~\ref{fig:input}).
 
 \vspace{0.5cm}
 \begin{figure}[ht]
@@ -193,9 +193,28 @@ S^{(2)}=\frac{S^{(2)}\cdot d}{0.01+max(S^{(2)})}
 \label{Third_Stage}
 \end{equation}
 
+\section{Results}
 
+For a single time step ($\Delta t$) the three model stages discribed above are run for V1 and then MT, so that the output of one time step equals the output of MT.\\
+The following overview (~\eqref{overview}) corresponds to one loop through figure~\ref{fig:bayerl1} where its output $S^{(3)}(MT)$ will be made to the following feedback.
 
+\begin{equation}
+\underbrace{S^{(1)}_{V1}\rightarrow S^{(2)}_{V1}\rightarrow S^{(3)}_{V1}\rightarrow S^{(1)}_{MT}\rightarrow S^{(2)}_{MT}\rightarrow S^{(3)}_{MT}}_{= 1 \cdot \Delta t}
+\label{overview}
+\end{equation}
 
+The corresponding parameters are summarized in table~\ref{tab:variables}:
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|c c c}
+	Model area & $net_{IN}$ & $net_{FB}$ & Spatial Kernal Size $\sigma$\\ \hline \hline\\
+	V1 		  & $in_{0}$ & $S(x+\Delta x,y+\Delta y)^{(3)}_{MT}$ & 0 (dirac) \\ \\
+	MT 		  & $S^{(3)}_{V1}$ & 0 & 7\\
+\end{tabular}
+\caption{Variables for model stages $S^{(1)}-S^{(3)}$ for both model areas, V1 and MT. $S(x+\Delta x, y+\Delta y)^{(3)}$ stands for the moved population code $S^{(3)}$ to the position of the next imput.}
+\label{tab:variables}
+\end{table}
 
 
 
