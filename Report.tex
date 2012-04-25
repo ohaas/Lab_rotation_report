@@ -1,7 +1,7 @@
 \documentclass[a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[top=1cm, bottom=3cm, left=3cm, right=3cm]{geometry}
+\usepackage[top=3cm, bottom=3cm, left=3cm, right=3cm]{geometry}
 \usepackage{graphicx}
 \usepackage[english]{babel}
 \usepackage{tocloft}
@@ -10,8 +10,10 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 
-
-
+\begin{document}
+\begin{titlepage}
+\thispagestyle{empty}
+\addtolength{\voffset}{-1cm}
 \title{ 
 \linethickness{0.7mm}
 \begin{center}
@@ -23,9 +25,8 @@
 \author{Olivia Haas\thanks{LMU - Graduate school of Systemic Neurosciences - Munich, Germany}}
 \date{}
 
-\begin{document}
+
 \maketitle
-\thispagestyle{empty}
 \begin{center}
 Supervisors:\\
 \vspace{1mm}
@@ -55,8 +56,9 @@ Martinsried (Munich, Germany)\\
 \begin{abstract}
 
 This lab rotation considered the affect of contextual feedback from the visual area MT to the primary visual cortex V1. Due to the aperture effect the movement of the presented square stimulus is amiguous accept at its edges. A model formulated to disambiguate the movement of each pixel consideres three stages within each model area. The first stage architecture is dominated by modulary feedback from the higher stage, whereas the second stage realizes an integration in space by an isotropic gaussian filter. Finally stage three normalizes estimations to emphasize unambgous signals.
-
 \end{abstract}
+
+\end{titlepage}
 
 \newpage
 \tableofcontents
@@ -100,7 +102,7 @@ As a stimulus a black square on a white backround was used, which moves in the d
 \vspace{0.5cm}
 \begin{figure}[ht]
 \centering
-\includegraphics[width=7cm]{pics/stimulus}
+\includegraphics[width=8cm]{pics/stimulus}
 \caption{Black square stimulus moving in the direction of 45 $^{\circ}$}. Each time step $\Delta t$ is represented as a single square at a certain position. For illustration reasons in this figure all time steps are presented together.
 \label{fig:stimulus}
 \end{figure}
@@ -113,7 +115,7 @@ More explicit this means that for each pixel a population code was build to mimi
 \vspace{0.5cm}
 \begin{figure}[ht]
 \centering
-\includegraphics[width=7.5cm]{pics/neuronGauss}
+\includegraphics[width=8cm]{pics/neuronGauss}
 \caption{Gaussian tuning curves in space of 8 different neurons with a maximal Amplitude of 1.}
 \label{fig:neuronGauss}
 \end{figure}
