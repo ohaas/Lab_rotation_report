@@ -150,9 +150,9 @@ Repeating this procedure for all pixels gives us the final input to the model (f
 \vspace{0.5cm}
 
 \subsection{Model stages}
-\subsubsection{First Stage $S^{(1)}$}
-
 All in- and outputs of model areas have the form of a population code ($(x,y,8)$), in order to store information for all pixels $(x,y)$ with activations of all 8 neurons per pixel.\\
+
+\subsubsection{First Stage $S^{(1)}$}
 Within the first model stage $S^{(1)}$ the input population code ($net_{IN}$) gets modified by the feedback ($net_{FB}$) fom the higher brain area. For model area V1 the feedback is the output of model area MT, which is moved to the current position of the stimulus. Model area MT however, does not receive feedback ($net_{FB}=0$) since no higher brain areas are considered in the model.\\
 The modulation by the feedback enhances matching input signals, as shown in equation~\eqref{First_Stage}:
 
@@ -183,8 +183,15 @@ S^{(2)}=(S^{(2)})^{2} \star G_{\sigma}^{x,space}
 \label{Second_Stage}
 \end{equation}
 
+\subsubsection{Third Stage $S^{(3)}$}
+The third stage gets the output of $S^{(2)}$ as input and serves the purpose to weaken ambigous signals, emphasize unambiguous signals and normalize direction estimations of previous stages.\\
+This is done by weigthing the 8 dimensional vector of each pixel of the forwarded input $S^{(2)}$ by the global, 8 dimensional direction estimation $d$. Further it is then normalized by the maximum of the input population code ($max(S^{(2)})$).\\
+Equation~\eqref{Third_Stage} illustrates this approach:
 
-
+\begin{equation}
+S^{(2)}=\frac{S^{(2)}\cdot d}{0.01+max(S^{(2)})}
+\label{Third_Stage}
+\end{equation}
 
 
 
