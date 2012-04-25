@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  25 APR 2012 13:52
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2011.7.3)  25 APR 2012 14:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -576,11 +576,15 @@ jpg> <./GSN.jpg>]
 \openout3 = `Report.toc'.
 
  [1]
+
+LaTeX Warning: Reference `fig:bouecke1' on page 2 undefined on input line 68.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 68--69
 
  []
 
-<bouecke1.jpg, id=23, 606.265pt x 301.125pt>
+<bouecke1.jpg, id=20, 606.265pt x 301.125pt>
 File: bouecke1.jpg Graphic file (type jpg)
  <use bouecke1.jpg>
 Package pdftex.def Info: bouecke1.jpg used on input line 73.
@@ -594,40 +598,87 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
 
-<bayerl1.jpg, id=24, 1104.125pt x 401.5pt>
+<bayerl1.jpg, id=21, 1104.125pt x 401.5pt>
 File: bayerl1.jpg Graphic file (type jpg)
  <use bayerl1.jpg>
 Package pdftex.def Info: bayerl1.jpg used on input line 87.
 (pdftex.def)             Requested size: 312.9803pt x 113.80992pt.
- [2 <./bouecke1.jpg> <./bayerl1.jpg>] <pics/stimulus.jpg, id=28, 815.045pt x 61
-4.295pt>
-File: pics/stimulus.jpg Graphic file (type jpg)
 
-<use pics/stimulus.jpg>
+
+LaTeX Warning: Reference `fig:bayerl1' on page 2 undefined on input line 93.
+
+[2 <./bouecke1.jpg> <./bayerl1.jpg>]
+<pics/stimulus.jpg, id=28, 815.045pt x 614.295pt>
+File: pics/stimulus.jpg Graphic file (type jpg)
+ <use pics/stimulus.jpg>
 Package pdftex.def Info: pics/stimulus.jpg used on input line 105.
 (pdftex.def)             Requested size: 227.62204pt x 171.5515pt.
- <pics/neuronGauss.jpg, id=29, 815.045pt x 614.295pt>
+
+
+LaTeX Warning: Reference `fig:neuronGauss' on page 3 undefined on input line 11
+3.
+
+<pics/neuronGauss.jpg, id=29, 815.045pt x 614.295pt>
 File: pics/neuronGauss.jpg Graphic file (type jpg)
 
 <use pics/neuronGauss.jpg>
 Package pdftex.def Info: pics/neuronGauss.jpg used on input line 118.
 (pdftex.def)             Requested size: 227.62204pt x 171.5515pt.
- [3 <./pics/stimulus.jpg>]
+
+
+LaTeX Warning: Reference `fig:neuronGauss' on page 3 undefined on input line 12
+4.
+
+[3 <./pics/stimulus.jpg>]
+
+LaTeX Warning: Reference `vector1' on page 4 undefined on input line 133.
+
+
+LaTeX Warning: Reference `vector2' on page 4 undefined on input line 140.
+
+
+LaTeX Warning: Reference `fig:input' on page 4 undefined on input line 141.
+
 <pics/input.jpg, id=36, 815.045pt x 614.295pt>
 File: pics/input.jpg Graphic file (type jpg)
  <use pics/input.jpg>
 Package pdftex.def Info: pics/input.jpg used on input line 146.
 (pdftex.def)             Requested size: 227.62204pt x 171.5515pt.
- [4 <./pics/neuronGauss.jpg> <./pics/input.jpg>] [5] (./Report.aux)
+
+
+LaTeX Warning: Reference `First_Stage' on page 4 undefined on input line 157.
+
+[4 <./pics/neuronGauss.jpg> <./pics/input.jpg>]
+
+LaTeX Warning: Reference `fig:spatialGauss' on page 5 undefined on input line 1
+68.
+
+<pics/spatialGauss.jpg, id=43, 815.045pt x 614.295pt>
+File: pics/spatialGauss.jpg Graphic file (type jpg)
+
+<use pics/spatialGauss.jpg>
+Package pdftex.def Info: pics/spatialGauss.jpg used on input line 173.
+(pdftex.def)             Requested size: 227.62204pt x 171.5515pt.
+
+
+LaTeX Warning: Reference `Second_Stage' on page 5 undefined on input line 174.
+
+
+LaTeX Warning: Reference `Second_Stage' on page 5 undefined on input line 179.
+
+[5 <./pics/spatialGauss.jpg>] (./Report.aux)
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 4063 strings out of 493633
- 54740 string characters out of 3143378
- 123726 words of memory out of 3000000
- 7280 multiletter control sequences out of 15000+200000
+ 4070 strings out of 493633
+ 54891 string characters out of 3143378
+ 123662 words of memory out of 3000000
+ 7286 multiletter control sequences out of 15000+200000
  16742 words of font info for 40 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  38i,13n,23p,601b,310s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -650,10 +701,10 @@ exmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2011/tex
 mf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2011/texmf
 -dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2011/texmf-d
 ist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on Report.pdf (6 pages, 736312 bytes).
+Output written on Report.pdf (6 pages, 781636 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 104 PDF objects out of 1000 (max. 8388607)
  69 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

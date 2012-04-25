@@ -162,6 +162,40 @@ S^{(1)}=net_{IN}\cdot(1+100\cdot net_{FB})
 \end{equation}
 
 \subsubsection{Second Stage $S^{(2)}$}
+The output of model stage $S^{(1)}$ is now fead foreward to stage two ($S^{(2)}$), where a convolution ($\star$) with a two dimensional, isotropic, spacial gaussian ($G^{x,space}$) enables a integration of neigbouring pixels in space and is comparable with its vector average.\\
+In model area V1 this gaussian is replaced with the direc delta ($\sigma=0$), so that the convolutions equals the identity projection. In MT the guassian is normed to an Amplitude $A=1$ and has a kernal size of $\sigma=7$ and a resolution of $0.7$.\\
+The spactial receptive field ratio of $V1:MT$ is $1:5$. The receptive field size of the reichard detector being $\sqrt{2\sigma^{2}}=1.41$ ($\sigma=1$) therefore inluences the receptive field size of MT to $\sqrt{1.41^{2}+7^{2}}=7.14$. With this we chose the total size of the two dimensional gaussian ($G^{x,space}$) to be $7.14$.
+An example of such a gaussian $G^{x,space}$ can be seen in figure~\ref{fig:spatialGauss}:
+
+\vspace{0.5cm}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=8cm]{pics/spatialGauss}
+\caption{Two dimensional Gauss used for the spactial convolution in~\eqref{Second_Stage}.}
+\label{fig:spatialGauss}
+\end{figure}
+\vspace{0.5cm}
+
+In equation~\eqref{Second_Stage} the convolution with such a spatial gaussian is shown. Also the input to this stage ($S^{(1)}$) is squared in order to sharpen the distribution.
+
+\begin{equation}
+S^{(2)}=(S^{(2)})^{2} \star G_{\sigma}^{x,space}
+\label{Second_Stage}
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
