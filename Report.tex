@@ -71,13 +71,13 @@ In a natrual environment the visual system deals with disambiguating moving stim
 \begin{figure}[ht]
 \centering
 \includegraphics[width=11cm]{bouecke1}
-\caption{The Dorsal pathway for motion processing. The location of involved brain areas are shown in the left part whereas a structural processing scheme is displayed on the right side.}
+\caption{The Dorsal pathway for motion processing (see \cite{Bouecke10}). The location of involved brain areas are shown in the left part whereas a structural processing scheme is displayed on the right side.}
 \label{fig:bouecke1}
 \end{figure}
 \vspace{0.5cm}
 
 
-The input to model area V1 is considered to be the output of a local measure of motion, which is realized by the Reichard detector \cite{Reichard}. It delivers a movement orthogonal to an extended edge, which is known as the aperture problem. This can be resolved for localized image features, such as edges, but remains otherwise. Due to the small receptive field of single neurons a e.g. horizontal edge which is moving in a 45 degree agle seems to move upward instead.\\
+The input to model area V1 is considered to be the output of a local measure of motion, which is realized by the Reichard detector \cite{Reichardt}. It delivers a movement orthogonal to an extended edge, which is known as the aperture problem (see \cite{Adelson82}). This can be resolved for localized image features, such as edges, but remains otherwise. Due to the small receptive field of single neurons a e.g. horizontal edge which is moving in a 45 degree agle seems to move upward instead.\\
 Such an initial detection of motion can be contradicting within one object and remains to be resolved within following areas V1 and MT.\\
 This disambiguation step is further subcategorized in six stages, three within the primary visual cortex and three in MT. Stages of both model areas are equal in their architecture.\\
 
@@ -85,13 +85,13 @@ This disambiguation step is further subcategorized in six stages, three within t
 \begin{figure}[ht]
 \centering
 \includegraphics[width=11cm]{bayerl1}
-\caption{Overview of the model architecture including three stages within area V1 and MT. Feedback stage $v^{(1)}$ is the output of area MT in V1 and zero in area MT, since no higher stages are considered to feed back to area MT. Stage $v^{(2)}$ consists of an integration with isotropic gaussian kernals in space realized by a convolution with the signal from $v^{(1)}$. $v^{(3)}$ is the lateral shunting inhibition stage ???? where unambiguous signals get amplified and amiguous ones get weakened.}
+\caption{Overview of the model architecture including three stages within area V1 and MT (see \cite{Bayerl04}). Feedback stage $v^{(1)}$ is the output of area MT in V1 and zero in area MT, since no higher stages are considered to feed back to area MT. Stage $v^{(2)}$ consists of an integration with isotropic gaussian kernals in space realized by a convolution with the signal from $v^{(1)}$. $v^{(3)}$ is the lateral shunting inhibition stage ???? where unambiguous signals get amplified and amiguous ones get weakened.}
 \label{fig:bayerl1}
 \end{figure}
 \vspace{0.5cm}
 
 In order to solve the aperture problem this architecture involves feedforward and modulatory feedback, which provides a prediction mecanism and is realized via a recurrent loop, see Figure~\ref{fig:bayerl1}.\\
-However, in V1 the fead forward signal from the reichard detector receives, as a first modulatory impact, feedback from area MT. The resulting actvity can then be interpreted as a measure of degree of match between the feedback and input at the next time step. Therefore, if the prediction of area MT matches the new input, the resulting activation will be maximal. The prupose of this step is to provide activations in V1 that match the expactations of the system\\
+However, in V1 the fead forward signal from the Reichardt detector receives, as a first modulatory impact, feedback from area MT. The resulting actvity can then be interpreted as a measure of degree of match between the feedback and input at the next time step. Therefore, if the prediction of area MT matches the new input, the resulting activation will be maximal. The prupose of this step is to provide activations in V1 that match the expactations of the system\\
 Further the resulting signal is sharpened by squaring it and then fead forward to the step of spatial integration. Here the signal from the previous step is convoluted with a two dimensional spatial gaussian. This serves the aim that motion information from neighbouring pixels are smoothened which can be compared to the vector average of the individual motion vectors. Here the model ensures integration of the surround into the motion information of each pixel which is then fead foreward to the final model area.\\
 Here a normalization of movement direction estimations is realized by ?????
 
@@ -108,9 +108,9 @@ As a stimulus a black square on a white backround was used, which moves in the d
 \end{figure}
 \vspace{0.5cm}
 
-As described above the input to model area V1 is the output of the Reichard detector.
-In this lab rotation the reichard detector was not implemented as such but its output was created manually instead.\\
-More explicit this means that for each pixel a population code was build to mimic the Reichard detector output. This was done by choosing 8 neurons which are individually tuned, in a gaussian fashion, to a certain angle in space. The neuronal tuning curves were chosen to equally divide the entire space (360$^{\circ}$) and can be seen in figure~\ref{fig:neuronGauss}
+As described above the input to model area V1 is the output of the Reichardt detector.
+In this lab rotation the Reichardt detector was not implemented as such but its output was created manually instead.\\
+More explicit this means that for each pixel a population code was build to mimic the Reichardt detector output. This was done by choosing 8 neurons which are individually tuned, in a gaussian fashion, to a certain angle in space. The neuronal tuning curves were chosen to equally divide the entire space (360$^{\circ}$) and can be seen in figure~\ref{fig:neuronGauss}
 
 \vspace{0.5cm}
 \begin{figure}[ht]
@@ -164,7 +164,7 @@ S^{(1)}=net_{IN}\cdot(1+100\cdot net_{FB})
 \subsubsection{Second Stage $S^{(2)}$}
 The output of model stage $S^{(1)}$ is now fead foreward to stage two ($S^{(2)}$), where a convolution ($\star$) with a two dimensional, isotropic, spacial gaussian ($G^{x,space}$) enables a integration of neigbouring pixels in space and is comparable with its vector average.\\
 In model area V1 this gaussian is replaced with the direc delta ($\sigma=0$), so that the convolutions equals the identity projection. In MT the guassian is normed to an Amplitude $A=1$ and has a kernal size of $\sigma=7$ and a resolution of $0.7$.\\
-The spactial receptive field ratio of $V1:MT$ is $1:5$. The receptive field size of the reichard detector being $\sqrt{2\sigma^{2}}=1.41$ ($\sigma=1$) therefore inluences the receptive field size of MT to $\sqrt{1.41^{2}+7^{2}}=7.14$. With this we chose the total size of the two dimensional gaussian ($G^{x,space}$) to be $7.14$.
+The spactial receptive field ratio of $V1:MT$ is $1:5$. The receptive field size of the Reichardt detector being $\sqrt{2\sigma^{2}}=1.41$ ($\sigma=1$) therefore inluences the receptive field size of MT to $\sqrt{1.41^{2}+7^{2}}=7.14$. With this we chose the total size of the two dimensional gaussian ($G^{x,space}$) to be $7.14$.
 An example of such a gaussian $G^{x,space}$ can be seen in figure~\ref{fig:spatialGauss}:
 
 \vspace{0.5cm}
@@ -256,6 +256,7 @@ Such an illustration can be seen in figure~\ref{fig:integratedMotion}.
 \section{Summary}
 The presented model represents a possible form of motion prossesing in area V1 and MT of the visual cortex. The used stimulus is a not filled, black square which is moving with each time step $\Delta t$ by $(\Delta x, \Delta y)=(12,12)$ in the direction of 45 $^{\circ}$. As an input a population code for each pixel was assumed to be coded by 8 neurones each tuned to a specific direction in space. The model provides three stages for V1 and MT each, which firstly enhances signals matching the feedback, coming from the upper brain area, secondly realizes an integration in space and thirdly weightens and normalizes the signals.\\
 Using such an approach lets ambigous signals for motion direction disambiguate within three loops through the model.
+
 
 
 \end{document}
