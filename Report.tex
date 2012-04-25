@@ -212,7 +212,7 @@ The corresponding variables are summarized in table~\ref{tab:variables}:
 	V1 		  & $in_{0}$ & $S(x+\Delta x,y+\Delta y)^{(3)}_{MT}$ & 0 (dirac) \\ \\
 	MT 		  & $S^{(3)}_{V1}$ & 0 & 7\\
 \end{tabular}
-\caption{Variables for model stages $S^{(1)}-S^{(3)}$ for both model areas, V1 and MT. $S(x+\Delta x, y+\Delta y)^{(3)}$ stands for the moved population code $S^{(3)}$ to the position of the next imput.}
+\caption{Variables for model stages $S^{(1)}-S^{(3)}$ for both model areas, V1 and MT. $S(x+\Delta x, y+\Delta y)^{(3)}$ stands for the moved population code $S^{(3)}$ to the position of the next imput. Here $\Delta x= \Delta x =12 pixel$}
 \label{tab:variables}
 \end{table}
 
@@ -222,7 +222,7 @@ Adoping the discribed model architecture, figure~\ref{fig:output} shows 7 time s
 \vspace{0.5cm}
 \begin{figure}[ht]
 \centering
-\includegraphics[width=8cm]{pics/output}
+\includegraphics[width=7.5cm]{pics/output}
 \caption{Outputs of 7 model time steps $\Delta t$ are shown where only the relevant vectors on the stimulus edges are presented.}
 \label{fig:output}
 \end{figure}
@@ -253,6 +253,9 @@ Such an illustration can be seen in figure~\ref{fig:integratedMotion}.
 \vspace{0.5cm}
 
 
+\section{Summary}
+The presented model represents a possible form of motion prossesing in area V1 and MT of the visual cortex. The used stimulus is a not filled, black square which is moving with each time step $\Delta t$ by $(\Delta x, \Delta y)=(12,12)$ in the direction of 45 $^{\circ}$. As an input a population code for each pixel was assumed to be coded by 8 neurones each tuned to a specific direction in space. The model provides three stages for V1 and MT each, which firstly enhances signals matching the feedback, coming from the upper brain area, secondly realizes an integration in space and thirdly weightens and normalizes the signals.\\
+Using such an approach lets ambigous signals for motion direction disambiguate within three loops through the model.
 
 
 \end{document}
