@@ -54,13 +54,10 @@
       <file>blx-compat.def</file>
       <file>biblatex.def</file>
       <file>blx-natbib.def</file>
-      <file>authortitle-dw.bbx</file>
-      <file>standard-dw.bbx</file>
+      <file>numeric.bbx</file>
       <file>standard.bbx</file>
-      <file>authortitle-dw.cbx</file>
-      <file>standard-dw.cbx</file>
+      <file>numeric.cbx</file>
       <file>biblatex.cfg</file>
-      <file>english-dw.lbx</file>
       <file>english.lbx</file>
     </requires>
   </internal>

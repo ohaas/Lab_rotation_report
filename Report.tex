@@ -8,11 +8,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{mathtools}
-\usepackage[style=authortitle-dw, backend=bibtex8, bibencoding=utf8,natbib=true,autopunct=true,hyperref=auto]{biblatex}
+\usepackage[style=numeric, backend=bibtex8, bibencoding=utf8,natbib=true,autopunct=true,hyperref=auto]{biblatex}
 \usepackage{babel}
 \bibliography{references}
-%\bibliographystyle{plain}
-%\usepackage[bibstyle=apa,natbib=true,autopunct=true,hyperref=auto]{biblatex}
 \usepackage[pdfborder={0 0 0}]{hyperref} 
 \usepackage[babel]{csquotes}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
@@ -266,7 +264,6 @@ Such an illustration can be seen in figure~\ref{fig:integratedMotion}.
 \section{Summary}
 The presented model represents a possible form of motion prossesing in area V1 and MT of the visual cortex. The used stimulus is a not filled, black square which is moving with each time step $\Delta t$ by $(\Delta x, \Delta y)=(12,12)$ in the direction of 45 $^{\circ}$. As an input a population code for each pixel was assumed to be coded by 8 neurones each tuned to a specific direction in space. The model provides three stages for V1 and MT each, which firstly enhances signals matching the feedback, coming from the upper brain area, secondly realizes an integration in space and thirdly weightens and normalizes the signals.\\
 Using such an approach lets ambigous signals for motion direction disambiguate within three loops through the model.
-
 
 
 \printbibliography[heading=bibintoc]
