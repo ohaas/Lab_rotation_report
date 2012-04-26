@@ -1,0 +1,118 @@
+% $ biblatex auxiliary file $
+% $ biblatex version 1.5 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\entry{Adelson82}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Adelson}{A.}%
+     {E.~H.}{E.~H.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Movshon}{M.}%
+     {J.A.}{J.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Nature, Vol. 300, No. 5892 (523-525)}%
+  }
+  \strng{namehash}{AEHMJ1}
+  \strng{fullhash}{AEHMJ1}
+  \field{sortinit}{A}
+  \field{title}{Phenomenal coherence of moving visual patterns}
+  \field{year}{1982}
+\endentry
+
+\entry{Bayerl04}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Bayerl}{B.}%
+     {Pierre}{P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Neumann}{N.}%
+     {Heiko}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Neural Computation 16 (2041-2066)}%
+  }
+  \strng{namehash}{BPNH1}
+  \strng{fullhash}{BPNH1}
+  \field{sortinit}{B}
+  \field{title}{Disambiguating Visual Motion Through Contextual Feedback
+  Modulation}
+  \list{location}{1}{%
+    {University of Ulm}%
+  }
+  \field{year}{2004}
+\endentry
+
+\entry{Bouecke10}{book}{}
+  \name{author}{2}{}{%
+    {{}%
+     {Kornprobst}{K.}%
+     {J.~D. Bouecke\text{,} E. Tlapale\text{,}~P.}{J.~D. B. E. T.~P.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Neumann}{N.}%
+     {H.}{H.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Journal on Advances in Signal Processing (Article ID 781561)}%
+  }
+  \strng{namehash}{KJDBETPNH1}
+  \strng{fullhash}{KJDBETPNH1}
+  \field{sortinit}{K}
+  \field{title}{Neural Mechanisms of Motion Detection, Integration, and
+  Segregation: From Biology to Artificial Image Processing Systems}
+  \field{year}{2011}
+\endentry
+
+\entry{Reichardt}{book}{}
+  \name{author}{1}{}{%
+    {{}%
+     {W}{W}%
+     {Reichardt\text{,}}{R.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Rosenblith Edition}%
+  }
+  \strng{namehash}{WR1}
+  \strng{fullhash}{WR1}
+  \field{sortinit}{W}
+  \field{title}{Autocorrelation, a principle for the evaluation of sensory
+  information by the central nervous system}
+  \list{location}{1}{%
+    {Wiley, NY}%
+  }
+  \field{year}{1961}
+\endentry
+
+\lossort
+\endlossort
+
+\endinput

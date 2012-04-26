@@ -1,14 +1,31 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
 \select@language {english}
-\contentsline {section}{\numberline {1}Introcuction}{2}
-\contentsline {section}{\numberline {2}Theory of Model Stages}{3}
-\contentsline {subsection}{\numberline {2.1}Input Stage}{3}
-\contentsline {subsection}{\numberline {2.2}Model stages}{5}
-\contentsline {subsubsection}{\numberline {2.2.1}First Stage $S^{(1)}$}{5}
-\contentsline {subsubsection}{\numberline {2.2.2}Second Stage $S^{(2)}$}{5}
-\contentsline {subsubsection}{\numberline {2.2.3}Third Stage $S^{(3)}$}{5}
-\contentsline {section}{\numberline {3}Results}{6}
-\contentsline {subsection}{\numberline {3.1}Architecture and Variables}{6}
-\contentsline {subsection}{\numberline {3.2}Model output}{6}
-\contentsline {subsection}{\numberline {3.3}Model feedback}{7}
-\contentsline {subsection}{\numberline {3.4}Integrated motion direction}{7}
-\contentsline {section}{\numberline {4}Summary}{8}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1}Introcuction}{2}{section.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}Theory of Model Stages}{3}{section.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Input Stage}{3}{subsection.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Model stages}{4}{subsection.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.1}First Stage $S^{(1)}$}{4}{subsubsection.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.2}Second Stage $S^{(2)}$}{5}{subsubsection.2.2.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.2.3}Third Stage $S^{(3)}$}{6}{subsubsection.2.2.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3}Results}{6}{section.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1}Architecture and Variables}{6}{subsection.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2}Model output}{6}{subsection.3.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3}Model feedback}{6}{subsection.3.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4}Integrated motion direction}{7}{subsection.3.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4}Summary}{7}{section.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{References}{8}{section*.1}

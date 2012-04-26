@@ -6,11 +6,20 @@
 \usepackage[english]{babel}
 \usepackage{tocloft}
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage[style=authortitle-dw, backend=bibtex8, bibencoding=utf8,natbib=true,autopunct=true,hyperref=auto]{biblatex}
+\usepackage{babel}
+\bibliography{references}
+%\bibliographystyle{plain}
+%\usepackage[bibstyle=apa,natbib=true,autopunct=true,hyperref=auto]{biblatex}
+\usepackage[pdfborder={0 0 0}]{hyperref} 
+\usepackage[babel]{csquotes}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 
 \begin{document}
+
 \begin{titlepage}
 
 \addtolength{\voffset}{-1cm}
@@ -103,7 +112,7 @@ As a stimulus a black square on a white backround was used, which moves in the d
 \begin{figure}[ht]
 \centering
 \includegraphics[width=8cm]{pics/stimulus}
-\caption{Black square stimulus moving in the direction of 45 $^{\circ}$}. Each time step $\Delta t$ is represented as a single square at a certain position. For illustration reasons in this figure all time steps are presented together.
+\caption{Black square stimulus moving in the direction of 45 $^{\circ}$. Each time step $\Delta t$ is represented as a single square at a certain position. For illustration reasons in this figure all time steps are presented together.}
 \label{fig:stimulus}
 \end{figure}
 \vspace{0.5cm}
@@ -240,6 +249,7 @@ The feedback $net_{FB}$ which corresponds to the moved output of the pevious loo
 \vspace{0.5cm}
 
 \subsection{Integrated motion direction}
+
 To illustrate the extreme cases, one can observe vectors in the middle of the horizontal and vertical stimulus edge. Due to their location being most distant from the unambiguous stimulus corners, their direction will unambiguate the slowest.\\
 Such an illustration can be seen in figure~\ref{fig:integratedMotion}.
 
@@ -258,5 +268,7 @@ The presented model represents a possible form of motion prossesing in area V1 a
 Using such an approach lets ambigous signals for motion direction disambiguate within three loops through the model.
 
 
+
+\printbibliography[heading=bibintoc]
 
 \end{document}
